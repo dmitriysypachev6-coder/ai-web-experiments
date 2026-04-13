@@ -1,0 +1,169 @@
+/* Сброс отступов и базовые стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Плавный переход фона — ключевое требование */
+  transition: background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* Начальный приятный градиентный фон (запасной вариант) */
+  background: linear-gradient(145deg, #f9f1e0 0%, #f5e9d3 100%);
+  background-color: #faf3e8; /* базовый цвет для плавного перехода */
+  
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+  padding: 1.5rem;
+  margin: 0;
+  
+  /* Лёгкая текстура для уюта (не мешает смене цвета) */
+  background-image: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.3) 0%, transparent 30%);
+}
+
+/* Карточка-контейнер — скругления, тени, воздух */
+.card {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  
+  /* Скруглённые углы */
+  border-radius: 48px;
+  
+  /* Мягкая тень */
+  box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.18),
+              0 8px 18px rgba(0, 0, 0, 0.05),
+              inset 0 1px 0 rgba(255,255,255,0.6);
+  
+  padding: 2.8rem 2.5rem;
+  text-align: center;
+  border: 1px solid rgba(255,255,240,0.5);
+  
+  /* Плавность появления при загрузке */
+  animation: floatIn 0.8s ease-out;
+}
+
+/* Заголовок */
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #2d2a44, #4a3f6e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  word-break: break-word;
+}
+
+/* Абзац с красивым текстом */
+p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #2e2c3a;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  background: rgba(255,255,250,0.3);
+  padding: 0.6rem 1.2rem;
+  border-radius: 60px;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: inset 0 1px 4px rgba(255,255,255,0.8), 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* Кнопка — скруглённая, сочная, с эффектами */
+.magic-button {
+  background: #3f3a5c;
+  background: linear-gradient(145deg, #4a3f6e, #2f2a48);
+  border: none;
+  color: #fef9ef;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1.1rem 2.8rem;
+  border-radius: 60px;  /* сильно скруглённые углы */
+  cursor: pointer;
+  
+  /* Тень и объём */
+  box-shadow: 0 14px 22px -8px rgba(47, 42, 72, 0.3),
+              0 4px 8px rgba(0,0,0,0.05),
+              inset 0 1px 2px rgba(255,255,255,0.25);
+  
+  /* Плавный переход всех свойств */
+  transition: all 0.25s ease;
+  
+  border: 1px solid rgba(255, 220, 180, 0.3);
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(4px);
+  margin-top: 0.5rem;
+}
+
+/* При наведении кнопка "оживает" */
+.magic-button:hover {
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 22px 28px -12px #2f2a48,
+              0 6px 12px rgba(0,0,0,0.08),
+              inset 0 1px 3px #fff9e6;
+  background: #5a4e7a;
+  background: linear-gradient(145deg, #5f5185, #3d3658);
+  color: #ffffff;
+  border-color: rgba(255, 235, 200, 0.6);
+}
+
+/* Активное состояние */
+.magic-button:active {
+  transform: scale(0.98) translateY(0px);
+  box-shadow: 0 8px 14px -6px #1f1b2e, inset 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.05s;
+}
+
+/* Убираем стандартный outline, добавляем свой для доступности */
+.magic-button:focus-visible {
+  outline: 3px solid #c9b6ff;
+  outline-offset: 4px;
+}
+
+/* Подсказка внизу — лёгкая и прозрачная */
+.hint {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #4e4762;
+  opacity: 0.8;
+  font-weight: 400;
+  background: rgba(255,255,245,0.3);
+  padding: 0.4rem 1.2rem;
+  border-radius: 40px;
+  backdrop-filter: blur(4px);
+  display: inline-block;
+}
+
+/* Анимация плавного появления */
+@keyframes floatIn {
+  0% { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптив для маленьких экранов */
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.5rem;
+    border-radius: 36px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .magic-button {
+    font-size: 1.3rem;
+    padding: 0.9rem 2rem;
+  }
+}
