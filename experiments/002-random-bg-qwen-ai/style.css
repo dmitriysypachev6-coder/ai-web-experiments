@@ -1,0 +1,74 @@
+/* ── Сброс и базовые настройки ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Плавный переход цвета фона */
+    transition: background-color 0.6s ease;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+/* ── Карточка-контейнер ── */
+.container {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 48px 40px;
+    max-width: 520px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Заголовок ── */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(100, 180, 255, 0.4);
+}
+
+/* ── Абзац ── */
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    color: #c8cdd5;
+}
+
+/* ── Кнопка ── */
+.btn {
+    padding: 14px 36px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #7b93f5, #8a5cb5);
+}
+
+.btn:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
