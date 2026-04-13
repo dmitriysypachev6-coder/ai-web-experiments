@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой первый ИИ-сайт</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-decoration">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+    </div>
+
+    <main class="container">
+        <h1 class="title">Мой первый ИИ-сайт</h1>
+        
+        <p class="description">
+            Добро пожаловать! Это моя первая веб-страница, созданная с помощью искусственного интеллекта. 
+            Нажмите кнопку ниже, чтобы увидеть магию — фон страницы изменит свой цвет!
+        </p>
+
+        <button class="btn-change-color" id="colorBtn" type="button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/>
+                <circle cx="12" cy="12" r="4"/>
+            </svg>
+            <span>Сменить цвет</span>
+        </button>
+
+        <div class="color-indicator">
+            <span class="indicator-label">Текущий цвет:</span>
+            <span class="color-value" id="colorValue">#0F0F23</span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
