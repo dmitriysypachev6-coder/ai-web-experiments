@@ -2,7 +2,7 @@
 
 **Модель:** DeepSeek 
 **Дата:** 2026-04-13
-**Промпт:** 
+**Промпт:** https://github.com/dmitriysypachev6-coder/ai-web-experiments/blob/main/experiments/001-random-bg/prompt.md
 
 ## Результат
 - [x] Заголовок "Мой первый ИИ-сайт" — есть.
